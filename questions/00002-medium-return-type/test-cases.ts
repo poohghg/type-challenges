@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type {Equal, Expect} from '@type-challenges/utils'
 
 type cases = [
   Expect<Equal<string, MyReturnType<() => string>>>,
@@ -9,6 +9,8 @@ type cases = [
   Expect<Equal<1 | 2, MyReturnType<typeof fn>>>,
   Expect<Equal<1 | 2, MyReturnType<typeof fn1>>>,
 ]
+
+type T = MyReturnType<typeof fn1>
 
 type ComplexObject = {
   a: [12, 'foo']
