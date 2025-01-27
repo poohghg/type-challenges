@@ -1,9 +1,13 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type {Equal, Expect} from '@type-challenges/utils'
 
 type cases = [
   Expect<Equal<DeepReadonly<X1>, Expected1>>,
   Expect<Equal<DeepReadonly<X2>, Expected2>>,
 ]
+
+type Ty = DeepReadonly<X1>
+
+type cc = Ty["c"]["e"]["l"]
 
 type X1 = {
   a: () => 22

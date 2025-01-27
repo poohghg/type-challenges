@@ -1,10 +1,10 @@
-import type { Alike, Expect } from '@type-challenges/utils'
+import type {Alike, Expect} from '@type-challenges/utils'
 
 type cases = [
   Expect<Alike<MyReadonly2<Todo1>, Readonly<Todo1>>>,
   Expect<Alike<MyReadonly2<Todo1, 'title' | 'description'>, Expected>>,
   Expect<Alike<MyReadonly2<Todo2, 'title' | 'description'>, Expected>>,
-  Expect<Alike<MyReadonly2<Todo2, 'description' >, Expected>>,
+  Expect<Alike<MyReadonly2<Todo2, 'description'>, Expected>>,
 ]
 
 // @ts-expect-error
@@ -15,6 +15,7 @@ interface Todo1 {
   description?: string
   completed: boolean
 }
+
 
 interface Todo2 {
   readonly title: string
