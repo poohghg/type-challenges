@@ -1,4 +1,6 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
+
+let s: MyCapitalize<'Foobar'>;
 
 type cases = [
   Expect<Equal<MyCapitalize<'foobar'>, 'Foobar'>>,

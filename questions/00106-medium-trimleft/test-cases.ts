@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
   Expect<Equal<TrimLeft<'str'>, 'str'>>,
@@ -9,3 +9,5 @@ type cases = [
   Expect<Equal<TrimLeft<''>, ''>>,
   Expect<Equal<TrimLeft<' \n\t'>, ''>>,
 ]
+
+

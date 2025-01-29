@@ -1,1 +1,3 @@
-type Trim<S extends string> = any
+type Trim<S extends string> =
+  S extends `${Space}${infer R}` | `${infer R}${Space}` ? Trim<R> : S
+
