@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
   Expect<Equal<LengthOfString<''>, 0>>,
@@ -6,3 +6,4 @@ type cases = [
   Expect<Equal<LengthOfString<'reina'>, 5>>,
   Expect<Equal<LengthOfString<'Sound! Euphonium'>, 16>>,
 ]
+

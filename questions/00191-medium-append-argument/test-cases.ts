@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type Case1 = AppendArgument<(a: number, b: string) => number, boolean>
 type Result1 = (a: number, b: string, x: boolean) => number
@@ -12,3 +12,5 @@ type cases = [
   // @ts-expect-error
   AppendArgument<unknown, undefined>,
 ]
+
+let t: Case1;

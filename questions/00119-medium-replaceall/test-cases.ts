@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
   Expect<Equal<ReplaceAll<'foobar', 'bar', 'foo'>, 'foofoo'>>,
@@ -11,3 +11,4 @@ type cases = [
   Expect<Equal<ReplaceAll<'foboorfoboar', 'bo', 'b'>, 'foborfobar'>>,
   Expect<Equal<ReplaceAll<'', '', ''>, ''>>,
 ]
+

@@ -2,3 +2,4 @@
 // https://github.com/type-challenges/type-challenges/issues/759
 
 type MyCapitalize<S extends string> = S extends `${infer Head}${infer Tail}` ? `${Uppercase<Head>}${Tail}` : S
+

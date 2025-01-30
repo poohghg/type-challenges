@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
   Expect<Equal<Flatten<[]>, []>>,
@@ -10,3 +10,6 @@ type cases = [
 
 // @ts-expect-error
 type error = Flatten<'1'>
+
+
+let a: Flatten<[1, [2]]>;
