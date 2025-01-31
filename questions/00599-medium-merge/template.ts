@@ -1,1 +1,1 @@
-type Merge<F, S> = any
+type Merge<F, S> = FlattenObject<Omit<F, keyof S> & S>

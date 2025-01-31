@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type test1 = {
   key: 'cat'
@@ -42,3 +42,4 @@ type cases = [
   Expect<Equal<AppendToObject<test2, 'home', 1>, testExpect2>>,
   Expect<Equal<AppendToObject<test3, 'moon', false | undefined>, testExpect3>>,
 ]
+
