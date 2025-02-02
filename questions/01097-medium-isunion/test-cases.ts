@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
   Expect<Equal<IsUnion<string>, false>>,
@@ -15,3 +15,5 @@ type cases = [
   Expect<Equal<IsUnion<string | 'a'>, false>>,
   Expect<Equal<IsUnion<never>, false>>,
 ]
+
+let a: IsUnion<string | number>;
