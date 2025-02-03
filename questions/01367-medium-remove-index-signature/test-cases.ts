@@ -1,7 +1,7 @@
 import type { Equal, Expect } from '@type-challenges/utils'
 
 type Foo = {
-  [key: string]: any
+  [key: string | number]: any
   foo(): void
 }
 
@@ -28,9 +28,3 @@ type cases = [
   Expect<Equal<RemoveIndexSignature<FooBar>, { [foobar](): void }>>,
   Expect<Equal<RemoveIndexSignature<Baz>, { bar(): void, baz: string }>>,
 ]
-
-let t: RemoveIndexSignature<Foo> = {
-  foo() {
-  },
-  dL: d,
-}

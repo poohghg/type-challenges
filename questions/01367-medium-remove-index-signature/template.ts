@@ -1,4 +1,5 @@
-type RemoveIndexSignature<T> =
-  {
-    [Key in keyof T as Key extends any[] ? never : Key]: T[Key]
-  }
+//  인덱스 서명 키는 string | number | symbol.
+
+type RemoveIndexSignature<T, P = PropertyKey> = {
+  [K in keyof T as P extends K ? never : K extends P ? K : never]: T[K]
+}
