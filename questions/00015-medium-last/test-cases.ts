@@ -1,4 +1,4 @@
-import type {Equal, Expect} from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
   Expect<Equal<Last<[]>, never>>,
@@ -10,6 +10,3 @@ type cases = [
 type T = Last<[2]>
 
 const two: T = 2
-
-
-

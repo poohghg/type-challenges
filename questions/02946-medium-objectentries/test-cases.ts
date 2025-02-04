@@ -15,3 +15,5 @@ type cases = [
   Expect<Equal<ObjectEntries<{ key: undefined }>, ['key', undefined]>>,
   Expect<Equal<ObjectEntries<{ key: string | undefined }>, ['key', string | undefined]>>,
 ]
+
+const a: ObjectEntries<{ key: string | undefined }> = ['name', 'dd']

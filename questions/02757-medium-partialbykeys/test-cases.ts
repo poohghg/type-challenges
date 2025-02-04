@@ -25,3 +25,8 @@ type cases = [
   // @ts-expect-error
   Expect<Equal<PartialByKeys<User, 'name' | 'unknown'>, UserPartialName>>,
 ]
+
+let a: PartialByKeys<User, 'age'> = {
+  address: 'd',
+  name: '3',
+}
