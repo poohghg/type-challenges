@@ -1,4 +1,6 @@
-type ObjectEntries<T, K extends keyof T = keyof T> =
-  K extends K
-    ? [K, T[K] extends undefined | infer Type ? Type : undefined]
-    : never
+// https://stackoverflow.com/questions/69523580/typescript-keyof-change-the-origin-property-optional
+// optional 타입의 값은 undefined ?
+
+type ObjectEntries<T, U = Required<T>> = {
+  [K in keyof U]: [K, U[K]]
+}[keyof U]
