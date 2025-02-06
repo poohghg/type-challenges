@@ -4,7 +4,3 @@ type Flatten<T extends unknown[]> =
       ? [...Flatten<First>, ...Flatten<Rest>]
       : [First, ...Flatten<Rest>]
     : T
-
-
-
-

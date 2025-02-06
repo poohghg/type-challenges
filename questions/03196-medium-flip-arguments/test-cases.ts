@@ -16,3 +16,5 @@ type errors = [
   // @ts-expect-error
   FlipArguments<null | undefined>,
 ]
+
+type t = FlipArguments<(aa: string) => void>
