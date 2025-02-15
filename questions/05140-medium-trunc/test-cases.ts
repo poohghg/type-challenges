@@ -12,3 +12,5 @@ type cases = [
   Expect<Equal<Trunc<'-10.234'>, '-10'>>,
   Expect<Equal<Trunc<10>, '10'>>,
 ]
+
+let a: Trunc<`-.3`>
