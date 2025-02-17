@@ -7,3 +7,5 @@ type cases = [
   // @ts-expect-error
   Expect<Equal<ConstructTuple<1000>['length'], 1000>>,
 ]
+
+let a: ConstructTuple<100>

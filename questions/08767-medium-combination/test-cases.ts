@@ -19,3 +19,5 @@ type cases = [
   Expect<Equal<Combination<['one', 'two']>, 'one' | 'two' |
   'one two' | 'two one'>>,
 ]
+
+let a: Combination<['one', 'two']>

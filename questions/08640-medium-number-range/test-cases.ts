@@ -22,3 +22,6 @@ type cases = [
   Expect<Equal<NumberRange<0, 2>, Result2>>,
   Expect<Equal<NumberRange<0, 140>, Result3>>,
 ]
+
+let a: NumberRange<6, 5>
+let b: RangeToUnion<2>
