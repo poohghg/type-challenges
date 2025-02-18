@@ -1,15 +1,12 @@
-type Combine<T extends string[], U extends string = ''> =
-  T extends [infer First extends string, ...infer Rest extends string[]]
-    ? Combine<Rest, U | `${U}${U extends '' ? '' : ' '}${First}`>
-    : U
+// type Combination<T extends string[], R extends string[] = [], Count extends any[] = []> =
+//   Count['length'] extends T['length']
+//     ? Combinations<[R]>
+//     : Combination<T, [...R, T[Count['length']]], [...Count, 0]> | Combination<T, [...R], [...Count, 0]>
 
-type Combinations<T extends string[][]> = T extends [infer First extends string[], ...infer Rest extends string[][]]
-  ? Exclude<Combine<First>, ''> | Combinations<Rest>
-  : never
+// All possible combinations of the elements in the input array
+// Item = All: to prevent the same element from being repeated
 
-type Combination<T extends string[], R extends string[] = [], Count extends any[] = []> =
-  Count['length'] extends T['length']
-    ? Combinations<[R]>
-    : Combination<T, [...R, T[Count['length']]], [...Count, 0]> | Combination<T, [...R], [...Count, 0]>
-
-// type Combination<T extends string[], R extends string[] = []> = T[number]
+type Combination<T extends string[], All = T[number], Item = All>
+  = Item extends string
+    ? Item | `${Item} ${Combination<[], Exclude<All, Item>>}`
+    : never
