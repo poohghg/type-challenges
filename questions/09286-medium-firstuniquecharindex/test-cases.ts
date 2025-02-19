@@ -7,3 +7,5 @@ type cases = [
   Expect<Equal<FirstUniqueCharIndex<''>, -1>>,
   Expect<Equal<FirstUniqueCharIndex<'aaa'>, -1>>,
 ]
+
+let a: FirstUniqueCharIndex<'aaa'>

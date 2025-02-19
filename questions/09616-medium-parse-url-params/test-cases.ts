@@ -8,3 +8,5 @@ type cases = [
   Expect<Equal<ParseUrlParams<'posts/:id/:user'>, 'id' | 'user'>>,
   Expect<Equal<ParseUrlParams<'posts/:id/:user/like'>, 'id' | 'user'>>,
 ]
+
+let a: ParseUrlParams<'posts/:id/:user'>
