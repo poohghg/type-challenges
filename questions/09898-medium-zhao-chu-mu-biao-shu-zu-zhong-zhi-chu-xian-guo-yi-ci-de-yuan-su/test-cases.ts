@@ -7,3 +7,5 @@ type cases = [
   Expect<Equal<FindEles<[1, 2, number]>, [1, 2, number]>>,
   Expect<Equal<FindEles<[1, 2, number, number]>, [1, 2]>>,
 ]
+
+let a: FindEles<[1, 2, number]>
