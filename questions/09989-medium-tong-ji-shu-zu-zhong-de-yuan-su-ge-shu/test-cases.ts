@@ -7,7 +7,7 @@ type cases = [
     3: 1
     4: 1
     5: 1
-  } >>,
+  }>>,
   Expect<Equal<CountElementNumberToObject<[1, 2, 3, 4, 5, [1, 2, 3]]>, {
     1: 2
     2: 2
@@ -35,3 +35,5 @@ type cases = [
     'd': 1
   }>>,
 ]
+
+let a: CountElementNumberToObject<[1, 2, 3, 4, 5, [1, 2, 3, [4, 4, 1, 2]]]>
