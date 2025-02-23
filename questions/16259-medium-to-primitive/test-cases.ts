@@ -8,6 +8,7 @@ type PersonInfo = {
     home: '123456'
     phone: '13111111111'
   }
+
   hobbies: ['sing', 'dance']
   readonlyArr: readonly ['test']
   fn: () => any
@@ -29,3 +30,5 @@ type ExpectedResult = {
 type cases = [
   Expect<Equal<ToPrimitive<PersonInfo>, ExpectedResult>>,
 ]
+
+let a: ToPrimitive<PersonInfo>

@@ -1,13 +1,13 @@
-type FlattenArray<T extends any[]> =
+type FlattenArray<T extends unknown[]> =
   T extends [infer Head, ...infer Rest]
     ? [Head] extends [never]
         ? [...FlattenArray<Rest>]
-        : Head extends any[]
+        : Head extends unknown[]
           ? [...FlattenArray<Head>, ...FlattenArray<Rest>]
           : [Head, ...FlattenArray<Rest>]
     : []
 
-type CountToObject<T extends unknown[], Result extends Record<PropertyKey, any[]> = {}> =
+type CountToObject<T extends unknown[], Result extends Record<PropertyKey, unknown[]> = {}> =
   T extends [infer Head extends PropertyKey, ...infer Rest]
     ? Head extends keyof Result
       ? CountToObject<Rest, Omit<Result, Head> & Record<Head, [...Result[Head], 0]>>

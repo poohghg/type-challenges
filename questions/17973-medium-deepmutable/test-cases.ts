@@ -8,6 +8,7 @@ interface Test1 {
     readonly author: string
   }
 }
+
 type Test2 = {
   readonly a: () => 1
   readonly b: string
@@ -30,6 +31,7 @@ type Test2 = {
     }
   }
 }
+
 interface DeepMutableTest1 {
   title: string
   description: string
