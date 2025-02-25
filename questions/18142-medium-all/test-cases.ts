@@ -1,4 +1,5 @@
 import type { Equal, Expect } from '@type-challenges/utils'
+import type { All } from './template'
 
 type cases = [
   Expect<Equal<All<[1, 1, 1], 1>, true>>,
