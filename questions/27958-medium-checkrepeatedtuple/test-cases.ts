@@ -1,4 +1,5 @@
 import type { Equal, Expect } from '@type-challenges/utils'
+import type { CheckRepeatedTuple } from './template'
 
 type cases = [
   Expect<Equal<CheckRepeatedTuple<[number, number, string, boolean]>, true>>,
