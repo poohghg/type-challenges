@@ -1,4 +1,5 @@
 import type { Equal, Expect } from '@type-challenges/utils'
+import type { IsFixedStringLiteralType } from './template'
 
 type testcase =
   | Expect<Equal<IsFixedStringLiteralType<'ABC'>, true>>
@@ -42,3 +43,6 @@ type testcase =
   | Expect<Equal<IsFixedStringLiteralType<`ABC${null}DEF`>, true>>
   | Expect<Equal<IsFixedStringLiteralType<`ABC${undefined}DEF`>, true>>
   | true
+
+let a: IsFixedStringLiteralType<`ABC${true}`>
+let b: IsFixedStringLiteralType<'ABC' | 'DEF'>

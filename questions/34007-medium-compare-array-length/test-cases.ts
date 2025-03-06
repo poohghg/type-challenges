@@ -4,5 +4,5 @@ type cases = [
   Expect<Equal<CompareArrayLength<[1, 2, 3, 4], [5, 6]>, 1>>,
   Expect<Equal<CompareArrayLength<[1, 2], [3, 4, 5, 6]>, -1>>,
   Expect<Equal<CompareArrayLength<[], []>, 0>>,
-  Expect<Equal<CompareArrayLength<[1, 2, 3], [4, 5, 6]>, 0>>,
+  Expect<Equal<CompareArrayLength<[1, 2, 3, never], [4, 5, 6]>, 1>>,
 ]
