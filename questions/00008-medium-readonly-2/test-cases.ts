@@ -1,4 +1,4 @@
-import type {Alike, Expect} from '@type-challenges/utils'
+import type { Alike, Expect } from '@type-challenges/utils'
 
 type cases = [
   Expect<Alike<MyReadonly2<Todo1>, Readonly<Todo1>>>,
@@ -15,7 +15,6 @@ interface Todo1 {
   description?: string
   completed: boolean
 }
-
 
 interface Todo2 {
   readonly title: string

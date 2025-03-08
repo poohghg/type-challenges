@@ -1,17 +1,19 @@
-import type {Equal, Expect} from '@type-challenges/utils'
+import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
   Expect<Equal<DeepReadonly<X1>, Expected1>>,
   Expect<Equal<DeepReadonly<X2>, Expected2>>,
 ]
 
+let a: DeepReadonly<X1>
+
 type Ty = DeepReadonly<X1>
 
-type cc = Ty["c"]["e"]["l"]
+type cc = Ty['a']
 
 type X1 = {
   a: () => 22
-  b: string
+  b: 'string'
   c: {
     d: boolean
     e: {
@@ -36,7 +38,7 @@ type X2 = { a: string } | { b: number }
 
 type Expected1 = {
   readonly a: () => 22
-  readonly b: string
+  readonly b: 'string'
   readonly c: {
     readonly d: boolean
     readonly e: {
