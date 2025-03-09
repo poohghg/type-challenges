@@ -1,3 +1,3 @@
-type DeepReadonly<T extends object> = keyof T extends never
-  ? T
-  : { [K: keyof T]: T[K] }
+type DeepReadonly<T> = {
+  readonly [P in keyof T]: keyof T[P] extends never ? T[P] : DeepReadonly<T[P]>;
+}

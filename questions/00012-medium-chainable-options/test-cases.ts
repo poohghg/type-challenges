@@ -3,9 +3,9 @@ import type { Alike, Expect } from '@type-challenges/utils'
 declare const a: Chainable
 
 const result1 = a
-  .option('foo', 123)
+  .option('foo', 123 as const)
   .option('bar', { value: 'Hello World' })
-  .option('name', 'type-challenges')
+  .option('name', 'type-challenges' as const)
   .get()
 
 const result2 = a
@@ -27,7 +27,7 @@ type cases = [
 ]
 
 type Expected1 = {
-  foo: number
+  foo: 123
   bar: {
     value: string
   }
@@ -41,3 +41,5 @@ type Expected2 = {
 type Expected3 = {
   name: number
 }
+
+let aaa: typeof result1
