@@ -18,4 +18,4 @@ type cases = [
   Expect<Equal<LookUp<Animal, 'cat'>, Cat>>,
 ]
 
-let a: LookUp<Animal, 'dog'>
+let a: LookUp<Animal, 'cat'>
