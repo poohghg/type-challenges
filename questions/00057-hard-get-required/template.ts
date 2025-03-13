@@ -1,1 +1,2 @@
-type GetRequired<T extends object> = any
+type GetRequired<T extends object> =
+  { [K in keyof T as T[K] extends Required<T>[K] ? K : never]: T[K] }
