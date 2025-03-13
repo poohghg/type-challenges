@@ -1,5 +1,3 @@
-type Trim<S extends string> = S extends `${TrimStr}${infer Srt}`
-  ? Trim<Srt> extends `${infer Str}${TrimStr}`
-    ? Trim<Str>
-    : S
+type Trim<S extends string> = S extends `${TrimStr}${infer Str}` | `${infer Str}${TrimStr}`
+  ? Trim<Str>
   : S
