@@ -6,3 +6,5 @@ type cases = [
   Expect<Equal<LengthOfString<'reina'>, 5>>,
   Expect<Equal<LengthOfString<'Sound! Euphonium'>, 16>>,
 ]
+
+let a: LengthOfString<'kumiko'>
