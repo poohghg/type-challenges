@@ -1,1 +1,2 @@
-type AppendToObject<T, U, V> = any
+type AppendToObject<T extends object, U extends PropertyKey, V> =
+  { [K in keyof T | U]: K extends keyof T ? T[K] : V }
