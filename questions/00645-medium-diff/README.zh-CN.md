@@ -9,11 +9,11 @@ type Foo = {
 }
 type Bar = {
   a: string;
-  c: boolean
+  c: boolean[template.ts](template.ts)
 }
 
-type Result1 = Diff<Foo,Bar> // { b: number, c: boolean }
-type Result2 = Diff<Bar,Foo> // { b: number, c: boolean }
+type Result1 = Diff<Foo, Bar> // { b: number, c: boolean }
+type Result2 = Diff<Bar, Foo> // { b: number, c: boolean }
 
 ```
 
