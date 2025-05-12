@@ -12,3 +12,5 @@ type cases = [
   Expect<Equal<PickByType<Model, string>, { name: string }>>,
   Expect<Equal<PickByType<Model, number>, { count: number }>>,
 ]
+
+let a: PickByType<Model, string>
