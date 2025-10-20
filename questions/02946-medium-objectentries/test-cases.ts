@@ -15,5 +15,3 @@ type cases = [
   Expect<Equal<ObjectEntries<{ key: undefined }>, ['key', undefined]>>,
   Expect<Equal<ObjectEntries<{ key: string | undefined }>, ['key', string | undefined]>>,
 ]
-
-let a: ObjectEntries<Partial<Model>>
