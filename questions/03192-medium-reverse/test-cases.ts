@@ -12,3 +12,5 @@ type errors = [
   // @ts-expect-error
   Reverse<{ key: 'value' }>,
 ]
+
+let a: Reverse<['a', 'b']>

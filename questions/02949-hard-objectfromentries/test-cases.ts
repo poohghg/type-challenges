@@ -11,3 +11,5 @@ type ModelEntries = ['name', string] | ['age', number] | ['locations', string[] 
 type cases = [
   Expect<Equal<ObjectFromEntries<ModelEntries>, Model>>,
 ]
+
+let a: ObjectFromEntries<ModelEntries>
