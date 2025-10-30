@@ -16,3 +16,5 @@ type errors = [
   // @ts-expect-error
   FlipArguments<null | undefined>,
 ]
+
+let a: FlipArguments<(arg0: string, arg1: number, arg2: boolean) => number>
