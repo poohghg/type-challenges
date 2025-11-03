@@ -5,5 +5,3 @@ type cases = [
   Expect<Equal<BEM<'btn', ['price'], ['warning', 'success']>, 'btn__price--warning' | 'btn__price--success'>>,
   Expect<Equal<BEM<'btn', [], ['small', 'medium', 'large']>, 'btn--small' | 'btn--medium' | 'btn--large'>>,
 ]
-
-let a: BEM<'btn', [], ['small', 'medium', 'large']>

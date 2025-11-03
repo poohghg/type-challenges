@@ -6,3 +6,5 @@ type cases = [
   Expect<Equal<{ 3.14: 'pi', true: 'bool' }, Flip<{ pi: 3.14, bool: true }>>>,
   Expect<Equal<{ val2: 'prop2', val: 'prop' }, Flip<{ prop: 'val', prop2: 'val2' }>>>,
 ]
+
+let a: Flip<{ pi: 'a' }>
