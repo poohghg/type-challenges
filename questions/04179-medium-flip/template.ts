@@ -1,3 +1,3 @@
-type Flip<T extends Record<string, string | number | bigint | boolean | null | undefined>> = {
+type Flip<T extends { [index: string]: any }> = {
   [P in keyof T as `${T[P]}`]: P
 }
