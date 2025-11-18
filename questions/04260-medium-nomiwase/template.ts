@@ -8,5 +8,3 @@ type AllCombinations<S extends string, U extends string = StrToUnion<S>> =
     : '' | {
       [K in U]: `${K}${AllCombinations<'', Exclude<U, K>>}`
     }[U]
-
-let a: AllCombinations<'ab'>
